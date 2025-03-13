@@ -30,7 +30,7 @@ func main() {
 	router.GET("/tasks", taskHandler.GetTasks)
 	router.POST("/tasks", taskHandler.CreateTask)
 	router.PUT("/tasks/:id", taskHandler.UpdateTask)
-	router.POST("/tasks/:id", taskHandler.DeleteTask)
+	router.DELETE("/tasks/:id", taskHandler.DeleteTask)
 
 	// Start server
 	if err := router.Run(":8080"); err != nil {
