@@ -6,11 +6,11 @@ import (
 )
 
 type TaskRepository struct {
-	db *sql.DB //menyimpan koneksi db
+	db *sql.DB
 }
 
 func NewTaskRepository(db *sql.DB) *TaskRepository {
-	return &TaskRepository{db: db} // Mengembalikan objek TaskRepository yang siap dipakai.
+	return &TaskRepository{db: db}
 }
 
 func (r *TaskRepository) CreateTask(task *entities.Task) error {
