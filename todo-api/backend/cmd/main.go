@@ -7,6 +7,7 @@ import (
 	"todo-api/internal/repositories"
 	"todo-api/internal/usecases"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -25,6 +26,14 @@ func main() {
 
 	// Setup Gin router
 	router := gin.Default()
+
+	//middleware CORS
+	router.Use(cors.New(cors.Config{
+		AllowOrigins:     []string{"http://localhost:5500", "http://127.0.0.1:5500"},
+		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowHeaders:     []string{"Content-Type"},
+		AllowCredentials: true,
+	}))
 
 	// Define routes
 	router.GET("/tasks", taskHandler.GetTasks)

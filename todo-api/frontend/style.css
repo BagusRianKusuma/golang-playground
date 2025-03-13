@@ -1,0 +1,122 @@
+/* style.css */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+    color: #343a40;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.task-card {
+    background: linear-gradient(135deg, #ffffff, #f1f3f5);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.task-card .task-content {
+    flex: 1;
+    margin-right: 16px;
+}
+
+.task-card h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #343a40;
+}
+
+.task-card p {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 8px;
+}
+
+.task-card small {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.task-card .task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.task-card .btn {
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 6px 12px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.task-card .btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Icon untuk tombol */
+.btn i {
+    margin-right: 6px;
+}
+
+/* Animasi untuk task card */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task-card {
+    animation: fadeIn 0.3s ease-in-out;
+}
